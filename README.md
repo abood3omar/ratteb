@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/abood3omar/ratteb">
-    <img src="public/images/logo.png" alt="Ratteb Logo" width="120" height="120">
+    <!-- <img src="public/images/logo.png" alt="Ratteb Logo" width="120" height="120"> -->
   </a>
 </p>
 
