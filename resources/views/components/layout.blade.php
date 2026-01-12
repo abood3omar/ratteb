@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title') - نَسَق</title>
+    <title>@yield('title') - رتّب</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -251,7 +251,7 @@
                             </a>
                         </div>
                     </div>
-                 </div>           
+                 </div>          
                 @endif
                 {{-- Security Menu --}}
                 @if(Auth::user()->hasPermission($entities['security'], $actions['show']))
@@ -268,14 +268,14 @@
 
                             <div class="relative z-10">
                                 {{-- System Modules --}}
-                              {{-- @if(Auth::user()->hasPermission($entities['system-module'], $actions['show']))              
+                              @if(Auth::user()->hasPermission($entities['system-module'], $actions['show']))              
                                 <a href="{{ route('system-module.index') }}" class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition font-medium border-b border-white/5">
                                     <div class="flex items-center gap-3">
                                         <span class="w-8 h-8 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center"><i class="fa-solid fa-cubes"></i></span>
                                         هيكلية النظام
                                     </div>
                                 </a>  
-                              @endif                                --}}
+                              @endif                              
                                 {{-- Roles & Rights --}}
                               @if(Auth::user()->hasPermission($entities['role-rights'], $actions['show']))  
                                 <a href="{{ route('role-rights.index') }}" class="block px-4 py-3 text-sm text-slate-300 hover:text-white hover:bg-white/5 transition font-medium border-b border-white/5">
@@ -324,11 +324,11 @@
             {{-- 3 - اللوغو --}}
             <a href="/home" class="flex items-center gap-3 group">
                 <div class="hidden sm:flex flex-col items-end">
-                    <span class="text-2xl font-black text-white tracking-tighter leading-none group-hover:text-blue-400 transition-colors drop-shadow-md">نَسَق</span>
+                    <span class="text-2xl font-black text-white tracking-tighter leading-none group-hover:text-blue-400 transition-colors drop-shadow-md">رتّب</span>
                 </div>
-                <div class="relative w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-2 transition-transform group-hover:scale-105 duration-300 border border-white/10 shadow-lg group-hover:shadow-blue-500/20">
-                    <img src="{{ asset('images/logo-white.png') }}" alt="نسق" class="w-full h-full object-contain drop-shadow-md">
-                </div>
+                {{-- <div class="relative w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-2 transition-transform group-hover:scale-105 duration-300 border border-white/10 shadow-lg group-hover:shadow-blue-500/20">
+                    <img src="{{ asset('images/logo-white.png') }}" alt="رتّب" class="w-full h-full object-contain drop-shadow-md">
+                </div> --}}
             </a>
         </div>
     </nav>
@@ -341,8 +341,8 @@
           {{-- 1.logo --}}
         <div class="p-6 flex justify-between items-center bg-white/5 border-b border-white/5">
             <div class="flex items-center gap-3">
-                <img src="{{ asset('images/logo.png') }}" alt="نسق" class="h-9 drop-shadow-lg">
-                <span class="font-black text-2xl text-white tracking-tight">نَسَق</span>
+                {{-- <img src="{{ asset('images/logo.png') }}" alt="رتّب" class="h-9 drop-shadow-lg"> --}}
+                <span class="font-black text-2xl text-white tracking-tight">رتّب</span>
             </div>
             <button onclick="toggleMobileMenu()" class="w-9 h-9 flex items-center justify-center bg-white/5 rounded-full text-slate-400 hover:bg-red-500/20 hover:text-red-400 transition border border-white/5">
                 <i class="fas fa-times text-lg"></i>
@@ -456,7 +456,7 @@
                         </div>
                         <div class="overflow-hidden">
                             <p class="text-sm font-bold text-white truncate">{{ auth()->user()->name }}</p>
-                            <p class="text-[10px] text-slate-400 truncate">{{ auth()->user()->email }}</p>
+                            <p class="text--[10px] text-slate-400 truncate">{{ auth()->user()->email }}</p>
                         </div>
                     </div>
                 </div>
@@ -475,46 +475,62 @@
         @yield('content')
     </main>
 
-    {{-- Footer --}}
-    <footer class="relative rounded-t-3xl mt-auto bg-[#050b14]/80 backdrop-blur-xl border-t border-white/5 py-8 z-20 sticky top-[100vh]">
+    {{-- Footer (English & Developer Credit) --}}
+    <footer dir="ltr" class="relative rounded-t-3xl mt-auto bg-[#050b14]/80 backdrop-blur-xl border-t border-white/5 py-12 z-20 sticky top-[100vh] text-left">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
         <div class="container mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-right">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                {{-- Col 1: Brand Info --}}
                 <div class="flex flex-col items-center md:items-start space-y-4">
-                    <img src="{{ asset('images/logo-white.png') }}" alt="نسق" class="h-20 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs font-medium">
-                        نَسَق.. منصتك الذكية لتنظيم المناسبات وحساب التكاليف بدقة وسهولة.
+                    <div class="flex items-center gap-2">
+                         {{-- <img src="{{ asset('images/logo-white.png') }}" alt="Ratteb" class="h-12 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"> --}}
+                         <span class="text-2xl font-black text-white">Ratteb</span>
+                    </div>
+                   
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs font-medium text-center md:text-left">
+                        Ratteb.. Your smart platform for organizing events and calculating costs accurately and easily.
                     </p>
                 </div>
-                <div class="text-center">
-                    <h4 class="text-white font-bold mb-6 text-lg relative inline-block">
-                        فريق العمل
-                        <span class="absolute -bottom-2 left-0 w-full h-1 bg-blue-600 rounded-full"></span>
+
+                {{-- Col 2: Developer Credit --}}
+                <div class="flex flex-col items-center md:items-start space-y-4">
+                    <h4 class="text-white font-bold text-lg relative inline-block mb-2">
+                        Developed By
+                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600 rounded-full"></span>
                     </h4>
-                    <div class="space-y-4 text-sm text-slate-300">
-                        <div class="bg-white/5 p-3 rounded-xl border border-white/5 hover:bg-white/10 transition duration-300">
-                            <p class="text-xs text-slate-400 mb-1">إعداد الطالبة</p>
-                            <p class="font-bold text-blue-300 text-lg">دانيا حاتم خطايبة</p>
-                            <p class="text-yellow-500/80 font-mono text-xs mt-1">ID: 1900902023</p>
+                    
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/5 hover:bg-white/10 transition duration-300 w-full max-w-sm">
+                        <div class="flex items-center gap-4">
+                             <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 font-bold border border-blue-500/30">
+                                AH
+                             </div>
+                             <div>
+                                 <p class="text-white font-bold text-lg">Abdalrhman Hamed</p>
+                                 <p class="text-blue-400 text-sm font-medium">Full Stack Web Developer</p>
+                             </div>
                         </div>
-                        <div class="bg-white/5 p-3 rounded-xl border border-white/5 hover:bg-white/10 transition duration-300">
-                            <p class="text-xs text-slate-400 mb-1">إشراف الدكتور</p>
-                            <p class="text-white font-bold text-lg">سيف الدين ربابعة</p>
+                        
+                        {{-- Social Links --}}
+                        <div class="flex gap-4 mt-4 pt-3 border-t border-white/10 justify-center md:justify-start">
+                             <a href="https://www.linkedin.com/in/abdalrhman-hamed-5b929725b/" target="_blank" class="text-slate-400 hover:text-blue-500 transition-colors" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin text-xl"></i>
+                             </a>
+                             <a href="https://github.com/abood3omar" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="GitHub">
+                                <i class="fa-brands fa-github text-xl"></i>
+                             </a>
+                             <a href="https://www.instagram.com/abood3omar/" target="_blank" class="text-slate-400 hover:text-pink-500 transition-colors" title="Instagram">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="text-center md:text-left flex flex-col items-center md:items-end">
-                    <div class="bg-gradient-to-br from-white/5 to-white/[0.02] p-6 rounded-3xl border border-white/5 shadow-2xl relative group">
-                        <p class="text-[10px] text-blue-400 mb-2 tracking-widest uppercase font-bold">المملكة الأردنية الهاشمية</p>
-                        <h5 class="text-xl font-black text-white mb-2">جامعة آل البيت</h5>
-                        <p class="text-xs text-slate-400 leading-relaxed max-w-[220px]">
-                            كلية الأمير الحسين بن عبدالله الثاني لتكنولوجيا المعلومات
-                        </p>
-                    </div>
+
+                {{-- Col 3: Copyright / Extra --}}
+                <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right">
+                     <p class="text-slate-500 text-sm font-medium tracking-wide">
+                        © {{ date('Y') }} Ratteb Project. <br> All rights reserved.
+                     </p>
                 </div>
-            </div>
-            <div class="border-t border-white/5 mt-12 pt-8 text-center">
-                <p class="text-xs text-slate-600 font-medium tracking-wide">© {{ date('Y') }} جميع الحقوق محفوظة لمشروع نَسَق</p>
             </div>
         </div>
     </footer>

@@ -11,10 +11,12 @@ class ModuleSeeder extends Seeder
     {
         // DB::table('modules')->insert([
         //     ['ModuleName' => 'Databank'],
-        //     ['ModuleName' => 'User'],
+        //     ['ModuleName' => 'users'],
         //     ['ModuleName' => 'Dashboard'],
-        //     ['ModuleName' => 'Sukuk'],
+        //     ['ModuleName' => 'sessions'],
         //     ['ModuleName' => 'Security'],
+        //     ['ModuleName' => 'admin-bookings'],
+        //     ['ModuleName' => 'account'],
         // ]);
     }
 }

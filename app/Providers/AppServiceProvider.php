@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
          PaginationPaginator::useTailwind();
-        //when do a migration you have to commment all of these lines - Abdalrhman Hamed
+        // when do a migration you have to commment all of these lines - Abdalrhman Hamed
         
         $entities = cache()->remember('global_entities', 60 * 60, function () {
             return [
@@ -40,11 +40,8 @@ class AppServiceProvider extends ServiceProvider
         });
     
         $actions = cache()->remember('global_actions', 60 * 60, function () {
-            return [
-                'create' => \App\Models\Action::where('ActionName', 'create')->first()?->ActionID,                
+            return [            
                 'show' => \App\Models\Action::where('ActionName', 'show')->first()?->ActionID,
-                'edit' => \App\Models\Action::where('ActionName', 'edit')->first()?->ActionID,
-                'delete' => \App\Models\Action::where('ActionName', 'delete')->first()?->ActionID,
             ];
         });
     
