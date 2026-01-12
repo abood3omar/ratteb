@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/abood3omar/ratteb">
-    <!-- <img src="public/images/logo.png" alt="Ratteb Logo" width="120" height="120"> -->
+    <img src="public/images/logo.png" alt="Ratteb Logo" width="120" height="120">
   </a>
 </p>
 
@@ -12,53 +12,74 @@
 
 <p align="center">
   <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"></a>
+  <a href="https://microsoft.com/sql-server"><img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server"></a>
   <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"></a>
   <a href="https://alpinejs.dev"><img src="https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=white" alt="Alpine.js"></a>
-  <a href="https://mysql.com"><img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"></a>
 </p>
 
 <br>
 
 ## 📋 About The Project
 
-**Ratteb** is a comprehensive web application designed to simplify the event planning process. Whether it's a wedding, graduation, or a corporate meeting, Ratteb guides users through a step-by-step wizard to choose services (Venues, Catering, Decoration, Photography) and manages the entire booking lifecycle.
+**Ratteb** is a sophisticated event planning system designed to bridge the gap between event service providers and customers. It solves the chaos of organizing weddings, parties, or corporate events by providing a unified **"One-Stop Shop"** experience.
 
-The system features a robust **Admin Dashboard** with advanced security permissions (RBAC) and a flexible **DataBank** to manage service providers and categories dynamically.
+The system relies on a powerful **DataBank** architecture where admins configure the core data (Providers, Services, Packages), allowing users to mix and match these services through a dynamic **Wizard** interface.
+
+---
+
+## 🔄 How It Works (System Workflow)
+
+1.  **The Guest Experience:**
+    * A visitor lands on the site and browses available services.
+    * They enter the **Planning Wizard** to build a custom event (selecting Venue, Food, Decoration, etc.).
+    * **Smart State Persistence:** If the user isn't logged in, the system **saves their draft locally**. They are redirected to Login/Register and then immediately returned to their draft without losing any data.
+
+2.  **The Booking Process:**
+    * Once confirmed, the booking is stored in **SQL Server**.
+    * Real-time notifications are sent to the Administration.
+
+3.  **Admin Control:**
+    * Admins review the incoming booking requests via the **Admin Dashboard**.
+    * The system allows Accepting/Rejecting bookings based on availability.
+    * Admins manage the entire system structure via the **DataBank Module**.
+
+---
+
+## 🗄️ Database Design (ERD)
+
+The system is built on a robust relational database schema designed for scalability and data integrity.
+
+<p align="center">
+  <img src="public/images/erd.png" alt="Entity Relationship Diagram (ERD)" width="100%">
+</p>
 
 ---
 
 ## ✨ Key Features
 
-### 🚀 For Users:
-* **Smart Planning Wizard:** A multi-step interactive planner to build your event from scratch.
-* **State Persistence:** The system remembers your selections even if you haven't logged in yet (using LocalStorage), ensuring a smooth UX.
-* **Smart Authentication:** Seamlessly redirects users to login/register while preserving their booking draft.
-* **Budget Calculator:** Real-time cost estimation based on selected services.
-* **Responsive Design:** Fully optimized for mobile and desktop using Tailwind CSS.
-* **User Dashboard:** Manage bookings, view history, and update profile settings.
+### 🚀 Advanced User Features:
+* **Interactive Planning Wizard:** A step-by-step guide to customize events.
+* **Draft Persistence:** Uses `LocalStorage` + `Laravel Logic` to keep user selections safe across sessions.
+* **Real-Time Cost Calculation:** Instant price updates as services are added/removed.
+* **Responsive UI:** Mobile-first design using Tailwind CSS.
 
-### 🛡️ For Admins (Control Panel):
-* **Advanced RBAC (Role-Based Access Control):** Granular control over Users, Roles, and Permissions.
-* **DataBank Module:** Dynamic management of Categories, Providers, Services, and Occasion Types.
-* **Booking Management:** Review, Approve, or Reject user bookings with status tracking.
-* **System Architecture:** Visualization of system modules and active sessions.
-* **Notification System:** Real-time alerts for new bookings and system actions.
-
----
-
-## 🛠️ Technologies Used
-
-* **Backend:** PHP (Laravel Framework).
-* **Frontend:** Blade Templates, Tailwind CSS, Alpine.js (for interactivity).
-* **Database:** MySQL.
-* **Icons:** FontAwesome 6.
-* **Version Control:** Git & GitHub.
+### 🛡️ Admin & Security (Back-Office):
+* **Role-Based Access Control (RBAC):** dynamic permission system (Permissions, Roles, Routes protection).
+* **DataBank Architecture:** A centralized module to manage:
+    * **Occasion Types:** (Weddings, Graduations, Meetings...).
+    * **Categories:** (Venues, Catering, Flowers...).
+    * **Service Providers:** (Vendor profiles and details).
+    * **Services:** (Individual items with pricing and capacity).
+* **System Monitoring:** View active sessions and system health.
 
 ---
 
-## 📸 Screenshots
+## 🛠️ Tech Stack
 
-*(Add screenshots of your Home page, Planner Wizard, and Admin Dashboard here)*
+* **Backend:** PHP 8.x, Laravel 10.x
+* **Database:** Microsoft SQL Server (SQLSRV)
+* **Frontend:** Blade, Tailwind CSS, Alpine.js
+* **Version Control:** Git & GitHub
 
 ---
 
@@ -76,23 +97,23 @@ The system features a robust **Admin Dashboard** with advanced security permissi
     npm install
     ```
 
-3.  **Environment Setup**
-    Copy the `.env.example` file to `.env` and configure your database credentials:
-    ```bash
-    cp .env.example .env
+3.  **Environment Configuration**
+    Copy the `.env.example` file to `.env` and configure your **SQL Server** credentials:
+    ```env
+    DB_CONNECTION=sqlsrv
+    DB_HOST=127.0.0.1
+    DB_PORT=1433
+    DB_DATABASE=ratteb_db
+    DB_USERNAME=sa
+    DB_PASSWORD=your_password
     ```
 
-4.  **Generate App Key**
-    ```bash
-    php artisan key:generate
-    ```
-
-5.  **Run Migrations & Seeders**
+4.  **Database Setup**
     ```bash
     php artisan migrate --seed
     ```
 
-6.  **Run the Application**
+5.  **Run the Application**
     ```bash
     npm run dev
     php artisan serve
@@ -102,7 +123,7 @@ The system features a robust **Admin Dashboard** with advanced security permissi
 
 ## 👨‍💻 Developed By
 
-**Abdalrhman Hamed** *Full Stack Web Developer*
+**Abdalrhman Hamed** - *Full Stack Web Developer*
 
 Connect with me:
 * [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdalrhman-hamed-5b929725b/)
@@ -112,5 +133,5 @@ Connect with me:
 ---
 
 <p align="center">
-  © 2024 Ratteb Project. All rights reserved.
+  © 2026 Ratteb Project. All rights reserved.
 </p>
