@@ -1,59 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://github.com/abood3omar/ratteb">
+    <img src="public/images/logo.png" alt="Ratteb Logo" width="120" height="120">
+  </a>
 </p>
 
-## About Laravel
+<h1 align="center">Ratteb (رتّب) - Event Planning Platform</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <strong>Your smart platform for organizing events, calculating costs, and booking services with ease.</strong>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"></a>
+  <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"></a>
+  <a href="https://alpinejs.dev"><img src="https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=white" alt="Alpine.js"></a>
+  <a href="https://mysql.com"><img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"></a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<br>
 
-## Learning Laravel
+## 📋 About The Project
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**Ratteb** is a comprehensive web application designed to simplify the event planning process. Whether it's a wedding, graduation, or a corporate meeting, Ratteb guides users through a step-by-step wizard to choose services (Venues, Catering, Decoration, Photography) and manages the entire booking lifecycle.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The system features a robust **Admin Dashboard** with advanced security permissions (RBAC) and a flexible **DataBank** to manage service providers and categories dynamically.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ✨ Key Features
 
-### Premium Partners
+### 🚀 For Users:
+* **Smart Planning Wizard:** A multi-step interactive planner to build your event from scratch.
+* **State Persistence:** The system remembers your selections even if you haven't logged in yet (using LocalStorage), ensuring a smooth UX.
+* **Smart Authentication:** Seamlessly redirects users to login/register while preserving their booking draft.
+* **Budget Calculator:** Real-time cost estimation based on selected services.
+* **Responsive Design:** Fully optimized for mobile and desktop using Tailwind CSS.
+* **User Dashboard:** Manage bookings, view history, and update profile settings.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🛡️ For Admins (Control Panel):
+* **Advanced RBAC (Role-Based Access Control):** Granular control over Users, Roles, and Permissions.
+* **DataBank Module:** Dynamic management of Categories, Providers, Services, and Occasion Types.
+* **Booking Management:** Review, Approve, or Reject user bookings with status tracking.
+* **System Architecture:** Visualization of system modules and active sessions.
+* **Notification System:** Real-time alerts for new bookings and system actions.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🛠️ Technologies Used
 
-## Code of Conduct
+* **Backend:** PHP (Laravel Framework).
+* **Frontend:** Blade Templates, Tailwind CSS, Alpine.js (for interactivity).
+* **Database:** MySQL.
+* **Icons:** FontAwesome 6.
+* **Version Control:** Git & GitHub.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 📸 Screenshots
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+*(Add screenshots of your Home page, Planner Wizard, and Admin Dashboard here)*
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## ⚙️ Installation & Setup
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/abood3omar/ratteb.git](https://github.com/abood3omar/ratteb.git)
+    cd ratteb
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    composer install
+    npm install
+    ```
+
+3.  **Environment Setup**
+    Copy the `.env.example` file to `.env` and configure your database credentials:
+    ```bash
+    cp .env.example .env
+    ```
+
+4.  **Generate App Key**
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Run Migrations & Seeders**
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6.  **Run the Application**
+    ```bash
+    npm run dev
+    php artisan serve
+    ```
+
+---
+
+## 👨‍💻 Developed By
+
+**Abdalrhman Hamed** *Full Stack Web Developer*
+
+Connect with me:
+* [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abdalrhman-hamed-5b929725b/)
+* [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/abood3omar)
+* [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/abood3omar/)
+
+---
+
+<p align="center">
+  © 2024 Ratteb Project. All rights reserved.
+</p>
