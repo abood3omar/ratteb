@@ -133,8 +133,8 @@ The system is built on a robust relational database schema designed for scalabil
     DB_CONNECTION=sqlsrv
     DB_HOST=127.0.0.1
     DB_PORT=1433
-    DB_DATABASE=ratteb_db
-    DB_USERNAME=sa
+    DB_DATABASE=ratteb
+    DB_USERNAME=
     DB_PASSWORD=your_password
     ```
 
