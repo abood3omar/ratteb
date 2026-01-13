@@ -50,14 +50,40 @@ The system relies on a powerful **DataBank** architecture where admins configure
 The system is built on a robust relational database schema designed for scalability and data integrity.
 
 <p align="center">
-  <img src="public/images/erd/system.png" alt="Entity Relationship Diagram (ERD)" width="100%">
+  <img src="public/images/erd/system.png" alt="System Entity Relationship Diagram (ERD)" width="100%">
 </p>
 
 <p align="center">
-  <img src="public/images/erd/security.png" alt="Entity Relationship Diagram (ERD)" width="100%">
+  <img src="public/images/erd/security.png" alt="Security Entity Relationship Diagram (ERD)" width="100%">
 </p>
 
 ---
+
+## 🗄️ Some of Screenshots of my website
+
+<p align="center">
+  <img src="public/images/website/home.png" alt="Home" width="100%">
+</p>
+
+<p align="center">
+  <img src="public/images/website/databank.png" alt="Databank" width="100%">
+</p>
+
+<p align="center">
+  <img src="public/images/website/plan.png" alt="Plan" width="100%">
+</p>
+
+<p align="center">
+  <img src="public/images/website/my-bookings-user.png" alt="My bookings" width="100%">
+</p>
+
+<p align="center">
+  <img src="public/images/website/bookings-admin.png" alt="bookings" width="100%">
+</p>
+
+
+---
+
 
 ## ✨ Key Features
 
