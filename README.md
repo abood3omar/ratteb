@@ -50,7 +50,11 @@ The system relies on a powerful **DataBank** architecture where admins configure
 The system is built on a robust relational database schema designed for scalability and data integrity.
 
 <p align="center">
-  <img src="public/images/erd.png" alt="Entity Relationship Diagram (ERD)" width="100%">
+  <img src="public/images/erd/system.png" alt="Entity Relationship Diagram (ERD)" width="100%">
+</p>
+
+<p align="center">
+  <img src="public/images/erd/security.png" alt="Entity Relationship Diagram (ERD)" width="100%">
 </p>
 
 ---
