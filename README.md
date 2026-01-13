@@ -106,7 +106,7 @@ The system is built on a robust relational database schema designed for scalabil
 
 ## 🛠️ Tech Stack
 
-* **Backend:** PHP 8.x, Laravel 10.x
+* **Backend:** PHP 8.x, Laravel 12.x
 * **Database:** Microsoft SQL Server (SQLSRV)
 * **Frontend:** Blade, Tailwind CSS, Alpine.js
 * **Version Control:** Git & GitHub
