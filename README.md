@@ -2,7 +2,7 @@
 
 <a href="https://github.com/abood3omar/ratteb">
   <img src="public/images/logo.png" alt="Ratteb Logo" width="120">
-</a>
+</a> 
 
 # 🎉 Ratteb (رتّب)
 ### Event Planning & Booking Management Platform
